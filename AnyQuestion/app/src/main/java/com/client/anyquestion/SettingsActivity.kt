@@ -10,7 +10,7 @@ import com.client.anyquestion.databinding.ActivitySettingsBinding
 
 class SettingsActivity : AppCompatActivity() {
 
-    var dataSet : Array<String> = arrayOf("Logout", "Withdrawal")
+    var dataSet : Array<String> = arrayOf("Logout", "Withdrawal", "Change Password")
     val mContext = this
     val preferenceManager : PreferenceManager = PreferenceManager()
 
@@ -41,6 +41,12 @@ class SettingsActivity : AppCompatActivity() {
                     position == 1 ->
                     {
                         val intent = Intent(mContext, WithdrawalActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    position == 2 ->
+                    {
+                        val intent = Intent(mContext, ChangePasswordActivity::class.java)
                         startActivity(intent)
                     }
                 }

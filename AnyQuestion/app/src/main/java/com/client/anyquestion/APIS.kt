@@ -35,6 +35,14 @@ interface APIS {
     @Headers("accept: application/json")
     fun get_user_withdrawal(@Header("Authorization") accessToken: String) : Call<WithdrawalDTO>
 
+    @POST("/auth/forgotpassword")
+    @Headers("accept: application/json", "content-type: application/json")
+    fun post_user_forgotpassword(@Body jsonparams: EmailDTO) : Call<TempPasswordDTO>
+
+    @POST("/auth/changepassword")
+    @Headers("accept: application/json", "content-type: application/json")
+    fun post_user_changepassword(@Header("Authorization") accessToken: String, @Body jsonparams: ChangePasswordDTO) : Call<ChangePasswordResultDTO>
+
     @GET("/speecher/delete")
     @Headers("accept: application/json")
     fun get_speecher_delete(@Header("Authorization") accessToken : String) : Call<GroupDeleteResult>
