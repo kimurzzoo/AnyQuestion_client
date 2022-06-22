@@ -1,17 +1,16 @@
-package com.client.anyquestion
+package com.client.anyquestion.network
 
+import com.client.anyquestion.auth.*
+import com.client.anyquestion.questioner.GroupSearchDTO
+import com.client.anyquestion.questioner.GroupSearchResultDTO
+import com.client.anyquestion.questioner.MeOutResultDTO
+import com.client.anyquestion.speecher.GroupDeleteResult
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
-import java.security.SecureRandom
-import java.security.cert.X509Certificate
-import javax.net.ssl.SSLContext
-import javax.net.ssl.TrustManager
-import javax.net.ssl.X509TrustManager
 
 interface APIS {
 

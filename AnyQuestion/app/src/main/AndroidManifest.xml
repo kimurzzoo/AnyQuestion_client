@@ -14,38 +14,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnyQuestion">
         <activity
-            android:name=".ChangePasswordActivity"
+            android:name=".TossActivity"
             android:exported="false" />
         <activity
-            android:name=".ForgotPasswordActivity"
+            android:name=".PayPalActivity"
             android:exported="false" />
         <activity
-            android:name=".LogoutActivity"
+            android:name=".PaymentSelectActivity"
             android:exported="false" />
         <activity
-            android:name=".WithdrawalActivity"
+            android:name=".auth.ChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".auth.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".QuestionerActivity"
+            android:name=".auth.LogoutActivity"
             android:exported="false" />
         <activity
-            android:name=".SpeecherActivity"
+            android:name=".auth.WithdrawalActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".auth.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".questioner.QuestionerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".speecher.SpeecherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".base.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.RegisterActivity"
             android:exported="false"
-            android:parentActivityName=".LoginActivity" />
+            android:parentActivityName=".auth.LoginActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".base.StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +64,7 @@
         </activity>
 
         <service
-            android:name=".BackgroundService"
+            android:name=".util.BackgroundService"
             android:stopWithTask="false" />
     </application>
 

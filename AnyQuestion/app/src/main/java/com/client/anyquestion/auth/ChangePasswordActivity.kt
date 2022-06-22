@@ -1,10 +1,13 @@
-package com.client.anyquestion
+package com.client.anyquestion.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import com.client.anyquestion.util.PreferenceManager
+import com.client.anyquestion.R
 import com.client.anyquestion.databinding.ActivityChangePasswordBinding
+import com.client.anyquestion.network.APIS
 import retrofit2.Call
 import retrofit2.Response
 
@@ -19,6 +22,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.changePasswordToolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         binding.changePasswordToolbar.title="Change Password"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)

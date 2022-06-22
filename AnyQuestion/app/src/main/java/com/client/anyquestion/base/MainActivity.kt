@@ -1,9 +1,15 @@
-package com.client.anyquestion
+package com.client.anyquestion.base
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.client.anyquestion.auth.SettingsActivity
 import com.client.anyquestion.databinding.ActivityMainBinding
+import com.client.anyquestion.network.APIS
+import com.client.anyquestion.questioner.QuestionerActivity
+import com.client.anyquestion.speecher.SpeecherActivity
+import com.client.anyquestion.util.BackgroundService
+import com.client.anyquestion.util.PreferenceManager
 
 class MainActivity : AppCompatActivity() {
     val api = APIS.create()

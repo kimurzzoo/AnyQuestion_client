@@ -1,4 +1,4 @@
-package com.client.anyquestion
+package com.client.anyquestion.questioner
 
 data class GroupSearchDTO(
     val roompassword : String

@@ -1,21 +1,21 @@
-package com.client.anyquestion
+package com.client.anyquestion.speecher
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.client.anyquestion.util.PreferenceManager
+import com.client.anyquestion.R
 import com.client.anyquestion.databinding.ActivitySpeecherBinding
+import com.client.anyquestion.network.APIS
 import com.launchdarkly.eventsource.EventSource
 import okhttp3.Headers
-import okhttp3.Request
 import retrofit2.Call
 import retrofit2.Response
 import java.lang.Exception
 import java.net.URI
-import java.time.Duration
 
 class SpeecherActivity : AppCompatActivity() {
     var eventHandler : MessageEventHandler? = null
@@ -34,6 +34,7 @@ class SpeecherActivity : AppCompatActivity() {
         eventHandler = MessageEventHandler(this, binding)
 
         setSupportActionBar(binding.speecherToolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         binding.speecherToolbar.title="Speecher"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)

@@ -1,10 +1,12 @@
-package com.client.anyquestion
+package com.client.anyquestion.base
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.client.anyquestion.R
+import com.client.anyquestion.auth.LoginActivity
 import com.client.anyquestion.databinding.ActivityStartBinding
 
 class StartActivity : AppCompatActivity() {

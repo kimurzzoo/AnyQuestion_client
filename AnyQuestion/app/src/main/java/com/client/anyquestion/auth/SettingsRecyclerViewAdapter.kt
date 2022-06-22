@@ -1,10 +1,11 @@
-package com.client.anyquestion
+package com.client.anyquestion.auth
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.client.anyquestion.R
 
 public class SettingsRecyclerViewAdapter(private val dataSet : Array<String>) : RecyclerView.Adapter<SettingsRecyclerViewAdapter.ViewHolder>() {
 

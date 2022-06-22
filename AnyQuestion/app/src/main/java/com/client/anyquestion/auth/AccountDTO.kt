@@ -1,4 +1,4 @@
-package com.client.anyquestion
+package com.client.anyquestion.auth
 
 data class AccountDTO(
     val name : String,

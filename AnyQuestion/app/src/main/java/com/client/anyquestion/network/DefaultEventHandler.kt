@@ -1,4 +1,4 @@
-package com.client.anyquestion
+package com.client.anyquestion.network
 
 import android.util.Log
 import com.launchdarkly.eventsource.*

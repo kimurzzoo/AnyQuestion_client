@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".auth.WithdrawalActivity">
+    tools:context=".payment.PaymentSelectActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/payment_select_toolbar"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do you want to delete your account? \nIf so, please type \'withdrawal\' and click the DELETE button"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/withdrawal_text"
-        android:ems="8"/>
+        android:text="Choose your method to pay."
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,15 +27,15 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/withdrawal_yes_button"
-            android:text="delete"
-            android:layout_marginHorizontal="10dp"/>
+            android:id="@+id/payment_select_paypal_button"
+            android:text="PayPal"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/withdrawal_no_button"
-            android:text="cancel"
-            android:layout_marginHorizontal="10dp"/>
+            android:id="@+id/payment_select_toss_button"
+            android:text="Toss"/>
+
     </LinearLayout>
+
 </LinearLayout>

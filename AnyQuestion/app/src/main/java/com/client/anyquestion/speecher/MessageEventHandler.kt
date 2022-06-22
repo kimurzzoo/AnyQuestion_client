@@ -1,11 +1,13 @@
-package com.client.anyquestion
+package com.client.anyquestion.speecher
 
 import android.util.Log
 import com.client.anyquestion.databinding.ActivitySpeecherBinding
+import com.client.anyquestion.network.DefaultEventHandler
 import com.launchdarkly.eventsource.MessageEvent
 
 
-class MessageEventHandler(val act : SpeecherActivity, val binding : ActivitySpeecherBinding) : DefaultEventHandler {
+class MessageEventHandler(val act : SpeecherActivity, val binding : ActivitySpeecherBinding) :
+    DefaultEventHandler {
     override fun onMessage(event: String, messageEvent: MessageEvent) {
         super.onMessage(event, messageEvent)
         val data = messageEvent.data

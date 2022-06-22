@@ -1,12 +1,13 @@
-package com.client.anyquestion
+package com.client.anyquestion.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.client.anyquestion.util.PreferenceManager
 import com.client.anyquestion.databinding.ActivityLogoutBinding
+import com.client.anyquestion.network.APIS
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class LogoutActivity : AppCompatActivity() {

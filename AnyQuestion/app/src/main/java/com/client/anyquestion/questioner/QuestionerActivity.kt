@@ -1,4 +1,4 @@
-package com.client.anyquestion
+package com.client.anyquestion.questioner
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,13 +6,14 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.client.anyquestion.util.PreferenceManager
+import com.client.anyquestion.R
 import com.client.anyquestion.databinding.ActivityQuestionerBinding
+import com.client.anyquestion.network.APIS
 import com.google.gson.Gson
 import com.launchdarkly.eventsource.EventSource
 import okhttp3.Headers
-import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Response
@@ -35,6 +36,7 @@ class QuestionerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.questionerToolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         binding.questionerToolbar.title="Questioner"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)

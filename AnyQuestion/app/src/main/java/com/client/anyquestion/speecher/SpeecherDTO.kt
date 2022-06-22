@@ -1,4 +1,4 @@
-package com.client.anyquestion
+package com.client.anyquestion.speecher
 
 data class SpeecherDTO(
     val roompassword : String

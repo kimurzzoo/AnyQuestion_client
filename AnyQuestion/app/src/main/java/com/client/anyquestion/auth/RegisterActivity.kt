@@ -1,11 +1,13 @@
-package com.client.anyquestion
+package com.client.anyquestion.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
+import com.client.anyquestion.R
 import com.client.anyquestion.databinding.ActivityRegisterBinding
+import com.client.anyquestion.network.APIS
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,6 +25,7 @@ class RegisterActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.registerToolbar)
         binding.registerToolbar.title="Register"
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
 

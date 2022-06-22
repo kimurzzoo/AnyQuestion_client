@@ -1,13 +1,15 @@
-package com.client.anyquestion
+package com.client.anyquestion.auth
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.widget.Toast
+import com.client.anyquestion.base.MainActivity
+import com.client.anyquestion.util.PreferenceManager
 import com.client.anyquestion.databinding.ActivityLoginBinding
+import com.client.anyquestion.network.APIS
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.loginToolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         binding.loginToolbar.title="Login"
 
         binding.loginButton.setOnClickListener {
